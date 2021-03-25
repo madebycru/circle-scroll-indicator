@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimal-ui">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Round Scroll Indicator</title>
+
+	<style type="text/css">
+
+
+		body{
+			background: #000;
+			height: 4000px;
+		}
+
+		h1{
+			text-align: center;
+		    margin-top: 20vh;
+		    font-size: 1.2em;
+		    font-family: sans-serif;
+		    font-weight: 400;
+		    color: #fff;
+		}
+
+
+		/** CSS for circle **/
+		.o-scrollindictor{
+			position: fixed;
+			z-index: 900000;
+		    display: inline-block;
+		    margin: 1rem;
+		    width: 160px;
+		    height: 160px;
+		    border-radius: 50%;
+		    background-color: transparent;
+		    clip-path: url(#oIndicatormask);
+		    -webkit-clip-path: url(#oIndicatormask);
+			bottom: -43px;
+			right: -30px;
+			transform: scale(0.15);
+
+		}
+		.o-scrollindictor span {
+		    display: inline-block;
+		    width: 100%;
+		    height: 100%;
+		    border-radius: 50%;
+		    clip-path: inset(0px 0px 0px 80px);
+		    -webkit-clip-path: inset(0px 0px 0px 80px);
+		    background-image: linear-gradient(90deg, transparent 50%, transparent 50%, transparent), linear-gradient(90deg, #fff 50%, transparent 50%, transparent);
+		}
+
+		
+	</style>
+</head>
+<body>
+
+	<h1>Scroll down 👇</h1>
+	<svg style="position: absolute;" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<defs>
+        <clipPath id="oIndicatormask" >
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M80 160C124.183 160 160 124.183 160 80C160 35.8172 124.183 0 80 0C35.8172 0 0 35.8172 0 80C0 124.183 35.8172 160 80 160ZM80 139C112.585 139 139 112.585 139 80C139 47.4152 112.585 21 80 21C47.4152 21 21 47.4152 21 80C21 112.585 47.4152 139 80 139Z" fill="black"/>
+		</clipPath>
+      </defs>
+    </svg>
+
+	<div class="o-scrollindictor" id="oScrollindictor">
+		<span i></span>
+	</div>
+
+	<script src="o-scrollindicator.js"></script>
+
+</body>
+</html>
