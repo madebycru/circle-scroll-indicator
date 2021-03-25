@@ -2,4 +2,4 @@
 
 This is a small scroll indicator as a circle.
 
-Demo: https://jsfiddle.net/b1n3t8ks/a6vfrz8e/
+Demo: https://codepen.io/b1n3t8ks/pen/QWdjRjK
